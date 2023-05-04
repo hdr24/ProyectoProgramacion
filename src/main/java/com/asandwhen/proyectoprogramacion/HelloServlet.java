@@ -1,6 +1,9 @@
 package com.asandwhen.proyectoprogramacion;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -8,9 +11,14 @@ import jakarta.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
     private String message;
 
+    public HelloServlet() throws SQLException {
+    }
+
     public void init() {
         message = "Hello World!";
     }
+
+    protected Connection con = DriverManager.getConnection("jdbc:sqlite:/");
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
