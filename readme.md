@@ -10,6 +10,10 @@
 1. Pregunta
 1. Perfil
 1. Formula preguntas
+1. Formula respuestas
+1. Eventos
+1. Crea evento
+1. Sobre nosotros
 
 ### Descripción básica
 
@@ -20,6 +24,9 @@
 * Perfil: Datos de un usuario en concreto
 * Formula preguntas: Formulario para crear una pregunta
 * Formula respuesta: Formulario para crear la respuesta a una pregunta
+* Eventos: Listado de los eventos
+* Formula eventos: Formulario para crear un evento
+* Sobre nosotros: Pagina de contacto
 
 ### Descripción detallada
 
@@ -30,6 +37,9 @@
 * Perfil: Se mostrarán los datos de un usuario en concreto, esto incluye las preguntas que ha hecho dicho usuario y las preguntas que ha respondido. Si el usuario accede a su propio perfil tendrá la opción de modificar sus datos.
 * Formula preguntas: Se pide al usuario que introduzca la pregunta en sí, una descripción donde desarrolle más sobre su consulta y el tema al que pertenece la pregunta. Se comprobará si hay alguna pregunta con el mismo nombre para evitar duplicados. La pregunta se insertará en la base de datos.
 * Formula respuestas: Un pequeño formulario donde el contribuyente responde a una pregunta y añade las fuentes de su respuesta si las tiene.
+* Eventos: Se listaran los eventos que crean las organizaciones, se mostraran primero los proximos eventos y luego los eventos que ya han acabado. 
+* Formula eventos: Los usuarios que esten marcados como organizacion podran crear eventos. Deben añadir la fecha y el lugar del evento, así como una descripción de lo que se hará en dicho evento. 
+* Sobre nosotros: Se incluira la informacion de la empresa The As and Whens. Se incluye tambien el correo electronico para que las empresas puedan contactar con nosotros y proveernos la informacion necesaria para que verifiquemos que son una empresa valida. Luego actualizaremos externamente la base de datos y cambiaremos el tipo del usuario para que pueda crear eventos 
 
 ### Conexiones
 
@@ -44,6 +54,7 @@
 ### Esquema básico
 
 Usando sqlite se guardarán los datos sobre usuarios, preguntas y respuestas. Para el funcionamiento correcto del programa necesitamos la siguiente información:
-* Usuario: id única, nombre de usuario también único, nombre, apellidos y una contraseña que guardaremos en md5
+* Usuario: id única, nombre de usuario también único, nombre, apellidos y una contraseña que guardaremos en md5. Tambien nos hara falta un valor booleano para saber si el usuario es empresa o no. 
 * Pregunta: id única, la pregunta en sí, una descripción, un tema, y un booleano para saber si la pregunta está respondida o no
 * Respuesta: id única, el desarrollo de la respuesta y un booleano que indique si el consultor ha marcado la respuesta como válida o no
+* Evento: id unica, nombre, descripcion, fecha, lugar, mapa
