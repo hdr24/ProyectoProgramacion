@@ -14,6 +14,7 @@
 1. Eventos
 1. Crea evento
 1. Sobre nosotros
+1. Administracion
 
 ### Descripción básica
 
@@ -27,6 +28,7 @@
 * Eventos: Listado de los eventos
 * Formula eventos: Formulario para crear un evento
 * Sobre nosotros: Pagina de contacto
+* Administracion: Pagina para administrar los usuarios
 
 ### Descripción detallada
 
@@ -40,7 +42,7 @@
 * Eventos: Se listaran los eventos que crean las organizaciones, se mostraran primero los proximos eventos y luego los eventos que ya han acabado. 
 * Formula eventos: Los usuarios que esten marcados como organizacion podran crear eventos. Deben añadir la fecha y el lugar del evento, así como una descripción de lo que se hará en dicho evento. 
 * Sobre nosotros: Se incluira la informacion de la empresa The As and Whens. Se incluye tambien el correo electronico para que las empresas puedan contactar con nosotros y proveernos la informacion necesaria para que verifiquemos que son una empresa valida. Luego actualizaremos externamente la base de datos y cambiaremos el tipo del usuario para que pueda crear eventos 
-
+* Administracion: Pagina a la que tendra solo acceso un usuario llamado "administrador" donde el admin puede ver todos los usuarios creados y modificarlos. Desde aqui el admin puede marcar a un usuario como empresa.
 ### Conexiones
 
 * Todas: si no ha iniciado sesión -> enlace a Inicio de sesión y Registro
