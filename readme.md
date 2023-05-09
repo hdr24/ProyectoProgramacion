@@ -58,3 +58,11 @@ Usando sqlite se guardarán los datos sobre usuarios, preguntas y respuestas. Pa
 * Pregunta: id única, la pregunta en sí, una descripción, un tema, y un booleano para saber si la pregunta está respondida o no
 * Respuesta: id única, el desarrollo de la respuesta y un booleano que indique si el consultor ha marcado la respuesta como válida o no
 * Evento: id unica, nombre, descripcion, fecha, lugar, mapa
+
+## Diseño
+De colores los más utilizados serán los propios del logo de nuestro proyecto, tal y como son el azul y el naranja.
+
+Azul: #DB4408
+Naranja: #F75A1C
+
+

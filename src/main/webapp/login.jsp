@@ -7,20 +7,26 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-    <head>
-        <title>Inicio de sesión</title>
-    </head>
-    <body>
-        <a href="index.jsp"><img src="placeholder" alt="indice"></a>
-        <form action="login.jsp" method="post">
-            <label> Nombre de usuario
-                <input type="text" name="username" maxlength="20">
-            </label>
-            <label> Contraseña
-                <input type="password" name="password">
-            </label>
-            <input type="submit" value="Iniciar sesión">
-        </form>
-        <a href="register.jsp">Registrarse</a>
-    </body>
+<head>
+    <title>Inicio de sesión</title>
+    <link href="estilos/reg.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logoImg.png">
+</head>
+<body>
+<section>
+    <a href="index.jsp"><img src="images/logoLetra.png" alt="indice" width="190" height="64px"></a>
+    <form action="login.jsp" method="post">
+        <label> Nombre de usuario
+            <input type="text" name="username" maxlength="20">
+        </label>
+        <label> Contraseña
+            <input type="password" name="password"> <br>
+        </label>
+        <input type="submit" value="Iniciar sesión">
+    </form>
+    <p>¿Aún no tienes cuenta?
+        <a href="register.jsp">Registrate</a>
+    </p>
+</section>
+</body>
 </html>
