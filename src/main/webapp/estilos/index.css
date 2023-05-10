@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+#inicio {
+    background-image: url("../images/stock-caridad.jpg" );
+    background-size: 110% 120%;
+    font-size: xx-large;
+    text-align: center;
+    font-family: Ebrima, serif;
+    color: white;
+    margin: 0;
+    padding: 80px 80px 100px;
+    scale: 100%;
+}
+
+#preguntas {
+    background-color: #F75A1C;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    color: white;;
+}
+
+#inicio p{
+   text-shadow: black 3px 3px;
+    margin-bottom:50px;
+    text-transform: uppercase;
+}
+
+#us {
+    margin: 2px 2px 2px 10%
+}
