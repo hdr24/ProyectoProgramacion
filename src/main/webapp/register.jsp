@@ -21,14 +21,14 @@
                 <td>
         <label> Nombre
             <td>
-            <input type="text" name="name">
+            <input type="text" name="name" required>
             </td>
         </label>
                 </td>
                 <td>
         <label> Apellidos
             <td>
-            <input type="text" name="surname">
+            <input type="text" name="surname" required>
             </td>
         </label>
                 </td>
@@ -37,14 +37,14 @@
                 <td>
         <label> Nombre de usuario
             <td>
-            <input type="text" name="username">
+            <input type="text" name="username" required>
             </td>
         </label>
                 </td>
                 <td>
         <label> Contraseña
             <td>
-            <input type="password" name="password" pattern="[A-Za-z0-9]{8,}">
+            <input type="password" name="password" pattern="[A-Za-z0-9]{8,}" required>
             </td>
         </label>
                 </td>

@@ -17,7 +17,7 @@
   <!--IF no sesion-->
   <a href="register.jsp">Registrarse</a>
   <a href="login.jsp">Login</a>
-
+  <h1 style="font-size: xxx-large"><a href="enlaces.jsp">ENALCES</a></h1> <!-- BORRAR -->
 <%--  IF hay sesion--%>
   <a href="perfil.jsp">Perfil ⚙️</a>
 </nav>

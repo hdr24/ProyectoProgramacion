@@ -9,15 +9,21 @@
 <html>
 <head>
     <title>Respondiendo a {tituloPregunta}</title>
+    <link rel="icon" type="image/x-icon" href="images/logoImg.png">
 </head>
 <body>
-<h1>Aqui puedes dar tus respuestas</h1>
+<h1>Tu respuesta</h1>
 <form method="post" action="formRespuestas">
-   <label>
-       <textarea name="respuesta" maxlength="1000" minlength="5"></textarea>
+   <label>Desarrollo de la respuesta
+       <textarea name="respuesta" maxlength="1000" minlength="5" required></textarea>
    </label>
 
+    <label>Fuentes (opcional)
+        <input type="text" name="fuente"> <br>
+    </label>
 
+    <input type="submit" value="Crear respuestas">
+    <input type="reset" value="Limpiar">
 
 
 </form>

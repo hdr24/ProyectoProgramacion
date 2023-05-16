@@ -1,0 +1,30 @@
+tr {
+    background-color: #A6D7F3;
+    margin: 0;
+}
+
+td {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+table {
+    border: black 0 solid;
+    width: 100%;
+    border-spacing: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+tr:nth-of-type(even) {
+    background-color: #A6B0F3;
+}
+
+th {
+    background-color: #C2A6F3;
+    padding: 20px;
+    margin: 0;
+    font-size: x-large;
+}

@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>{tituloPregunta}</title>
+    <link rel="icon" type="image/x-icon" href="images/logoImg.png">
 </head>
 <body>
 
