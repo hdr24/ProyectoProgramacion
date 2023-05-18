@@ -63,7 +63,9 @@ Usando sqlite se guardarán los datos sobre usuarios, preguntas y respuestas. Pa
 ## Diseño
 De colores los más utilizados serán los propios del logo de nuestro proyecto, tal y como son el azul y el naranja.
 
-Azul: #DB4408
-Naranja: #F75A1C
+Azul: #0E77F1
+Naranja: #F1880E
+Naranja 2: #F4A03E
+Azul 2: #3E92F4
 
 

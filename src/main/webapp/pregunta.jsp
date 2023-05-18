@@ -12,6 +12,13 @@
     <link rel="icon" type="image/x-icon" href="images/logoImg.png">
 </head>
 <body>
+    <p>Titulo la pregunta</p>
+    <p>Desarrollo de la pregunta</p>
+    <p>Usuario que realiza la pregunta</p>
+    <p>Tema de la pregunta</p>
+    <p>Respuestas</p>
+    <p>Desarrollo de la respuesta</p>
+    <p>Usuario que realiza la respuesta</p>
 
 </body>
 </html>

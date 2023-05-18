@@ -1,5 +1,5 @@
 tr {
-    background-color: #A6D7F3;
+    background-color: #0E77F1;
     margin: 0;
 }
 
@@ -9,7 +9,7 @@ td {
     text-align: center;
 }
 table {
-    border: black 0 solid;
+    border: black 3px solid;
     width: 100%;
     border-spacing: 0;
 }
@@ -19,12 +19,19 @@ h1 {
 }
 
 tr:nth-of-type(even) {
-    background-color: #A6B0F3;
+    background-color: #3E92F4;
 }
 
 th {
-    background-color: #C2A6F3;
+    background-color: #F1880E;
     padding: 20px;
     margin: 0;
     font-size: x-large;
+    font-weight: bold;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

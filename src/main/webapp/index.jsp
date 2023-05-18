@@ -1,6 +1,12 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
+<%@ page import="com.asandwhen.proyectoprogramacion.md5" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%if (Objects.equals(session.getAttribute("user"), "admin")) {
+  response.sendRedirect("admin.jsp");
+  return;
+}%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +19,13 @@
   <a href="index.jsp"><img src="images/logo.png" alt="indice" width="100" height="100"></a>
   <a href="pregunta.jsp">Preguntas</a>
   <a href="evento.jsp">Eventos</a>
-
+<%
+  out.println(session.getAttribute("user"));
+%>
   <!--IF no sesion-->
   <a href="register.jsp">Registrarse</a>
   <a href="login.jsp">Login</a>
-  <h1 style="font-size: xxx-large"><a href="enlaces.jsp">ENALCES</a></h1> <!-- BORRAR -->
+  <h1 style="font-size: xxx-large"><a href="enlaces.jsp">ENLACES</a></h1> <!-- BORRAR -->
 <%--  IF hay sesion--%>
   <a href="perfil.jsp">Perfil ⚙️</a>
 </nav>

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Objects" %><%--
   Created by IntelliJ IDEA.
   User: Héctor del Real
   Date: 5/4/2023
@@ -15,7 +15,14 @@
 <body>
     <section>
         <a href="index.jsp"><img src="images/logoLetra.png" alt="indice" width="190" height="64px"></a>
-    <form method="post" action="register.jsp">
+        <p style="color: red">
+        <%
+            if (Objects.equals(request.getParameter("error"), "error")) {
+                out.println("El nombre de usuario ya existe");
+            }
+        %>
+        </p>
+        <form method="post" action="register">
         <table>
             <tr>
                 <td>
