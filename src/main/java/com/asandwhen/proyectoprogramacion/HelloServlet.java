@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
     private String message;
 
-    public HelloServlet() throws SQLException {
+    public HelloServlet() {
     }
 
     public void init() {

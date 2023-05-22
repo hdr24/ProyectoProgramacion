@@ -7,7 +7,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Objects;
 
 @WebServlet(name = "crud", value = "/crud")
@@ -33,14 +36,17 @@ public class crud extends HttpServlet {
 
             if (Objects.equals(request.getParameter("eliminar"), "true")) {
                 l.execute("DELETE FROM Usuario WHERE Username='"+username+"'");
-            } else {
+            } else if (Objects.equals(request.getParameter("password"), null)){
                 l.execute("UPDATE Usuario SET Nombre = '"+name+"', Apellidos = '"+surname+"', Username = '"+username+"', Tipo = '"+tipo+"' WHERE username = '"+user+"'");
+            } else {
+                String password = md5.toMD5(request.getParameter("password"));
+                l.execute("UPDATE Usuario SET Nombre = '"+name+"', Apellidos = '"+surname+"', Username = '"+username+"', Contraseña = '"+password+"' WHERE username = '"+user+"'");
             }
 
             l.close();
             conect.close();
             response.sendRedirect("admin.jsp");
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
 

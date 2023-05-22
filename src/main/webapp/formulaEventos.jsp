@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Crea tu evento</title>
+    <link rel="stylesheet" href="estilos/formulaEventos.css">
     <link rel="icon" type="image/x-icon" href="images/logoImg.png">
 </head>
 <body>
@@ -34,8 +35,8 @@
         Mapa (Opcional)
         <input type="text" name="mapa">
     </label>
-    <input type="submit" value="Crear el evento">
-    <input type="reset" value="Limpiar">
+    <input class="proyecto" type="submit" value="Crear el evento">
+    <input class="proyecto" type="reset" value="Limpiar">
 </form>
 <p>Si deseas añadir un mapa interactivo a tu evento:</p>
 <ul>

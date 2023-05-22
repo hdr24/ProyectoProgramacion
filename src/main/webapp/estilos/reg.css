@@ -27,3 +27,8 @@ label {
 input {
     margin: 5px;
 }
+
+.proyecto {
+    background-color: #0E77F1;
+    color: white;
+}

@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+form > label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.proyecto {
+    background-color: #0E77F1;
+    color: white;
+}
+

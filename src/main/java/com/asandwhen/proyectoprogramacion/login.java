@@ -27,12 +27,14 @@ public class login extends HttpServlet {
             // pasamos la contraseña introducida a md5
             String expectedPassword = a.getString(5);
             password = md5.toMD5(password);
+            int id = a.getInt("ID");
 
             if (password.equals(expectedPassword)) {
                 a.close();
                 l.close();
                 conect.close();
                 session.setAttribute("user", username);
+                session.setAttribute("id", id);
                 response.sendRedirect("index.jsp");
                 return;
             }

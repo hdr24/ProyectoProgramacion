@@ -57,7 +57,7 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value = "Registrar">
+        <input class="proyecto" type="submit" value = "Registrar">
 
     </form>
     </section>

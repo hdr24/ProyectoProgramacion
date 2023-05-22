@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Creando preguntas</title>
+    <link rel="stylesheet" href="estilos/creaPreguntas.css" >
     <link rel="icon" type="image/x-icon" href="images/logoImg.png">
 </head>
 <body>
@@ -19,9 +20,9 @@
     <label for="desc">Descripcion</label>
     <textarea name="descripcion" id="desc" required></textarea>
     <label for="tema">Tema</label>
-    <input type="text" id="tema" required>
-    <input type="submit" value="Crear preguntas">
-    <input type="reset" value="Limpiar">
+    <input type="text" id="tema" name="tema" required>
+    <input class="proyecto" type="submit" value="Crear preguntas">
+    <input class="proyecto" type="reset" value="Limpiar">
 </form>
 </body>
 </html>

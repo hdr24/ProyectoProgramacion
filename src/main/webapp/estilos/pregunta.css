@@ -1,0 +1,11 @@
+.tema {
+    background-color: lightskyblue;
+    border: #0E77F1 solid 1px;
+    border-radius: 10px;
+    display: inline;
+    padding: 5px;
+}
+
+td {
+    padding: 8px;
+}

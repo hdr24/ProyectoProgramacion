@@ -10,6 +10,7 @@
 <head>
     <title>Respondiendo a {tituloPregunta}</title>
     <link rel="icon" type="image/x-icon" href="images/logoImg.png">
+    <link rel="stylesheet" href="estilos/respuestaPreguntas.css">
 </head>
 <body>
 <h1>Tu respuesta</h1>
@@ -22,8 +23,9 @@
         <input type="text" name="fuente"> <br>
     </label>
 
-    <input type="submit" value="Crear respuestas">
-    <input type="reset" value="Limpiar">
+    <input type="hidden" name="id" value=<%out.println(request.getParameter("id"));%>>
+    <input class="proyecto" type="submit" value="Crear respuestas">
+    <input class="proyecto" type="reset" value="Limpiar">
 
 
 </form>

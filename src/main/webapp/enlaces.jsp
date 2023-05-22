@@ -24,6 +24,8 @@
 <a href="formulaEventos.jsp">Formula eventos</a>
 <a href="admin.jsp">Adminsitracoin</a>
 
+<%out.println(session.getAttribute("id"));%>
+
 </body>
 </html>
 

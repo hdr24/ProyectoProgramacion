@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="estilos/admin.css">
 </head>
 <body>
-
+<a href="logout">Cerrar sesión</a>
 <%if (!(Objects.equals(session.getAttribute("user"), "admin"))) {
   response.sendRedirect("index.jsp");
   return;
