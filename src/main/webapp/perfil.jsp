@@ -1,12 +1,25 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="java.util.ArrayList" %><%--
-  Created by IntelliJ IDEA.
-  User: Héctor del Real
-  Date: 5/9/2023
-  Time: 10:51 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<nav>
+    <a href="index.jsp"><img src="images/logo.png" alt="indice" width="100" height="100"></a>
+
+    <a href="pregunta.jsp">Preguntas</a>
+    <a href="evento.jsp">Eventos</a>
+    <%if (Objects.equals(session.getAttribute("user"), "admin")) {
+        response.sendRedirect("admin.jsp");
+        return;
+    }
+        if (session.getAttribute("user") == null) {
+            out.println("<a href=login.jsp>Iniciar sesión</a>");
+            out.println("<a href=register.jsp>Registrarse</a>");
+        } else {
+            out.println("<a href=logout>Cerrar sesión</a>");
+            out.println("<a href=perfil.jsp?user="+session.getAttribute("user")+">"+session.getAttribute("user")+"</a>");
+        }
+    %>
+</nav>
 
 <%
     String username = request.getParameter("user");
@@ -94,38 +107,6 @@
 %>
 
 <p>Este usuario ha respondido <%out.println(respuestas);%> pregunta/s</p>
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Editar perfil</h2>
-<form method="post" action="crud">
-    <label>Nombre de Usuario
-        <input type="text" name="Usuario" value="<%out.println(username);%>">
-    </label>
-
-    <label> Contraseña
-        <input type="password" name="password" pattern="[A-Za-z0-9]{8,}">
-    </label>
-
-    <label> Nombre
-        <input type="text" name="Nombre" value="<%out.println(nombre);%>">
-    </label>
-
-    <label> Apellidos
-        <input type="text" name="Apellidos" value="<%out.println(apellidos);%>">
-    </label>
-
-    <input class="proyecto" type="submit" value="Cambiar datos">
-</form>
 </body>
 </html>
 

@@ -1,4 +1,5 @@
-<%@ page import="java.sql.*" %><%--
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.Objects" %><%--
   Created by IntelliJ IDEA.
   User: Héctor del Real
   Date: 5/9/2023
@@ -13,7 +14,24 @@
     <link rel="stylesheet" href="estilos/pregunta.css">
 </head>
 <body>
+<nav>
+    <a href="index.jsp"><img src="images/logo.png" alt="indice" width="100" height="100"></a>
 
+    <a href="pregunta.jsp">Preguntas</a>
+    <a href="evento.jsp">Eventos</a>
+    <%if (Objects.equals(session.getAttribute("user"), "admin")) {
+        response.sendRedirect("admin.jsp");
+        return;
+    }
+        if (session.getAttribute("user") == null) {
+            out.println("<a href=login.jsp>Iniciar sesión</a>");
+            out.println("<a href=register.jsp>Registrarse</a>");
+        } else {
+            out.println("<a href=logout>Cerrar sesión</a>");
+            out.println("<a href=perfil.jsp?user="+session.getAttribute("user")+">"+session.getAttribute("user")+"</a>");
+        }
+    %>
+</nav>
 <%
     try {
         Class.forName("org.sqlite.JDBC");
