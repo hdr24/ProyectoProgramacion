@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Crea un evento</h1>
-<form method="post" action="evento">
+<form method="post" action="creaevento">
     <label>
         Nombre del evento
         <input type="text" name="nombre" required>
