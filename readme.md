@@ -53,6 +53,8 @@ Usando sqlite se guardarán los datos sobre usuarios, preguntas y respuestas. Pa
 * Respuesta: id única, el desarrollo de la respuesta y un booleano que indique si el consultor ha marcado la respuesta como válida o no
 * Evento: id unica, nombre, descripcion, fecha, lugar, mapa
 
+![](Modelo-logico.png)
+
 ## Diseño
 Vamos a usar los colores complementarios azul y naranja, de la misma manera que se ha usado en el logo de GivAid. Se intentará tener un diseño sencillo y moderno
 
