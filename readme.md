@@ -42,13 +42,6 @@
 * Eventos: Se listarán los eventos que crean las organizaciones, se mostraran primero los proximos eventos y luego los eventos que ya han acabado. 
 * Formula eventos: Los usuarios que esten marcados como organizacion podran crear eventos. Deben añadir la fecha y el lugar del evento, así como una descripción de lo que se hará en dicho evento. 
 * Administracion: Pagina a la que tendra solo acceso un usuario llamado "administrador" donde el admin puede ver todos los usuarios creados y modificarlos. Desde aqui el admin puede marcar a un usuario como empresa.
-### Conexiones
-
-* Todas: si no ha iniciado sesión -> enlace a Inicio de sesión y Registro
-* Todas: si ha iniciado sesión -> enlace a perfil y formula pregunta
-* Todas siempre: enlace a índice
-* Índice: siempre enlace a preguntas y formula preguntas
-* Pregunta: Si ha iniciado sesion -> enlace a responder pregunta
 
 ## Base de datos
 
@@ -61,11 +54,46 @@ Usando sqlite se guardarán los datos sobre usuarios, preguntas y respuestas. Pa
 * Evento: id unica, nombre, descripcion, fecha, lugar, mapa
 
 ## Diseño
-De colores los más utilizados serán los propios del logo de nuestro proyecto, tal y como son el azul y el naranja.
+Vamos a usar los colores complementarios azul y naranja, de la misma manera que se ha usado en el logo de GivAid. Se intentará tener un diseño sencillo y moderno
 
-Azul: #0E77F1
-Naranja: #F1880E
-Naranja 2: #F4A03E
-Azul 2: #3E92F4
+## Primer prototipo
 
+En el primer prototipo de nuestra página web hemos creado las funcionalidades básicas más importantes. Estas incluyen:
+* Registrarse e Iniciar sesión
+* Poder crear eventos (usuarios permitidos) y participar en ellos
+* Crear preguntas y responderlas
+* El administrador puede cambiar los valores de los usuarios
+* Perfil de cada usuario
 
+### Funcionalidades implementadas
+
+#### Registro e Inicio de Sesión
+
+Usamos las clases de session para guardar los parámetros de cada usuario en su propia sesión, esto facilita la inserción de datos ya que no tenemos que acceder a la base de datos antes de insertar datos en la misma.
+
+El registro de los usuarios inserta un usuario en la base de datos, comprobando primero que no hay ningún usuario con el mismo nombre de usuario.
+
+#### Creación de eventos y participación
+
+Cada usuario registrado puede crear un evento, siempre que sea de tipo "Organización" (1). Los datos del formulario se introducen en la base de datos para luegos ser mostrados. Todos los usuarios independientemente de su tipo pueden hacer click en participar para que en la base de datos consta que participas.
+
+#### Creación de preguntas y responderlar
+
+Todo usuario registrado tiene la posibilidad de crear preguntas y responderlas. Las preguntas se insertan en la base de datos en una tabla que esta relacionada con la tabla respuestas, a su vez respuestas está relacionada con usuarios. De esta manera podemos mostrar las respuestas de cada pregunta y qué usuario es el que ha respondido.
+
+#### Administración
+
+Tenemos un usuario llamado admin que, si inicia sesión, es redireccionado automáticamente a la página de administración. Este usuario puede cambiar los datos de los usuarios como el tipo. Estos cambios se actualizan en la base de datos usando UPDATE.
+
+#### Perfil de usuario
+
+Podemos acceder a los perfiles de los diferentes usuarios desde todas partes. Se muestra un enlace cada vez que se muestra el nombre de un usuario, de esta manera puedes comprobar si el usuario que ha respondido tu pregunta es confiable. En el perfil se muestran los datos básicos así como las preguntas que ha creado cada usuario, el número de respuestas y sus skills.
+
+Los skills que se muestran van acorde al tema de las preguntas que ha respondido un usuario.
+
+### Cosas a implementar o mejorar
+
+Este prototipo no tiene todas las funcionalidades que planteadas, en la versión final de GivAid se podría implementar:
+* Validación de respuestas
+* Upvote o downvote de respuestas
+* Permitir al usuario modificar su perfil
